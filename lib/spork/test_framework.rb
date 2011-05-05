@@ -98,8 +98,7 @@ class Spork::TestFramework
     contents = File.read(helper_file)
     bootstrap_code = File.read(BOOTSTRAP_FILE)
     File.open(helper_file, "wb") do |f|
-      f.puts bootstrap_code
-      f.puts contents
+      f.puts bootstrap_code.gsub('  # HELPER_FILE_CONTENTS', contents.gsub(/^/, "  "))
     end
 
     stderr.puts "Done. Edit #{helper_file} now with your favorite text editor and follow the instructions."

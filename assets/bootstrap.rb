@@ -6,6 +6,10 @@ Spork.prefork do
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
 
+  # This is the origininal contents of the test framework helper file. It will
+  # be loaded during Spork initialization.
+  # HELPER_FILE_CONTENTS
+
 end
 
 Spork.each_run do
